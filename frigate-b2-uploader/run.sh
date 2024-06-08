@@ -5,10 +5,15 @@
 # ==============================================================================
 
 # Export configuration options as environment variables
-export B2_ACCOUNT_ID=$(bashio::config 'B2_ACCOUNT_ID')
-export B2_APPLICATION_KEY=$(bashio::config 'B2_APPLICATION_KEY')
+export TZ=$(bashio::config 'TZ')
+export FRIGATE_IP_ADDRESS=$(bashio::config 'FRIGATE_IP_ADDRESS')
+export FRIGATE_PORT=$(bashio::config 'FRIGATE_PORT')
+export STORAGE_BACKENDS=$(bashio::config 'STORAGE_BACKENDS')
+export B2_REGION=$(bashio::config 'B2_REGION')
+export B2_ENDPOINT=$(bashio::config 'B2_ENDPOINT')
+export B2_ACCESS_KEY_ID=$(bashio::config 'B2_ACCESS_KEY_ID')
+export B2_SECRET_ACCESS_KEY=$(bashio::config 'B2_SECRET_ACCESS_KEY')
 export B2_BUCKET_NAME=$(bashio::config 'B2_BUCKET_NAME')
-export FRIGATE_URL=$(bashio::config 'FRIGATE_URL')
 
 # Run the Frigate B2 Uploader
 exec /usr/bin/frigate-b2-uploader
