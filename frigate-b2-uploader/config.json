@@ -1,0 +1,26 @@
+{
+  "name": "Frigate B2 Uploader",
+  "version": "0.1.0",
+  "slug": "frigate_b2_uploader",
+  "description": "An uploader for Frigate to Backblaze B2",
+  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+  "startup": "services",
+  "boot": "auto",
+  "init": false,
+  "homeassistant": "true",
+  "host_network": "true",
+  "map": ["config:rw"],
+  "options": {
+    "B2_ACCOUNT_ID": "",
+    "B2_APPLICATION_KEY": "",
+    "B2_BUCKET_NAME": "",
+    "FRIGATE_URL": "http://frigate:5000"
+  },
+  "schema": {
+    "B2_ACCOUNT_ID": "str",
+    "B2_APPLICATION_KEY": "str",
+    "B2_BUCKET_NAME": "str",
+    "FRIGATE_URL": "str"
+  },
+  "image": "ghcr.io/sisyphusmd/frigate-b2-uploader:0.1.0-dev"
+}
